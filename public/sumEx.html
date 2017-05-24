@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Learning How The Browser Works</title>
+</head>
+
+<body>
+  <p>this will disappear</p>
+  <p id="test"></p>
+
+<script>
+document.getElementById("test").innerHTML = 4 + 6;
+document.write(2+2);
+
+var script = doccument.createElement("script");
+script.type = "text/javascript";
+script.src = "file1.js";
+doccument.getElementByTagName("head")[0].appendChild(script);
+</script>
+
+</body>
+
+</html>

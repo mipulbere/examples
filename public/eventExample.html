@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Event Handler Example</title>
+</head>
+
+<body>
+<button onclick="document.getElementById('exercise').innerHTML = 'You clicked!'">CLICK</button>
+
+<p id="exercise"></p>
+
+<h1 onmouseover="answerQuestion(this)">Are you tired?</h1>
+<script>
+function answerQuestion (id) {
+  id.innerHTML = "Yes";
+}
+</script>
+
+</body>
+</html>

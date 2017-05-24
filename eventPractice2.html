@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Event Handling</title>
+</head>
+
+<body>
+
+<p id="exercise"></p>
+
+<!--reveales text after you click the image -->
+<div onclick = "showDescription(this)">
+  <img src = "http://cdn2-www.dogtime.com/assets/uploads/gallery/dachshund-puppies/dachshund-puppy-12.jpg">
+</div>
+<script>
+function showDescription (id) {
+  id.innerHTML = "puppy!";
+}
+</script>
+
+<!--chenges text when you hover on and off the word -->
+<h1 onmouseover="this.innerHTML = 'yes!'" onmouseout="this.innerHTML = 'no!'">Hover over me.</h1>
+
+<!--changes the image when you click on and off the image-->
+<div onmousedown = "changeImage()">
+  <img id="eyeImage" onmousedown="eyeClosed()" onmouseup="eyeOpen ()" width="300" height="300" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpd5hkY7Wdu3zsNkNCoogKO025FNJT9UW4kySaf7A5JZFFauECAw">
+</div>
+<script>
+function eyeOpen () {
+   document.getElementById('eyeImage').src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpd5hkY7Wdu3zsNkNCoogKO025FNJT9UW4kySaf7A5JZFFauECAw";
+}
+function eyeClosed() {
+   document.getElementById('eyeImage').src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_E2SvRZxZ8xZbLS7cS-KzOmxVncINQCq1sgbCPSYRjvPfzXz3";
+}
+</script>
+
+<input type="text" onkeypress="keyPressAlert()">
+<script>
+function keyPressAlert() {
+  alert("you entered the wrong letter")
+
+}
+</script>
+
+
+</body>
+</html>

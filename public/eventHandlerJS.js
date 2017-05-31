@@ -5,6 +5,13 @@ function loadDoc(id) {
       id.innerHTML = xhttp.responseText;
     }
   };
-  xhttp.open("GET", "helloWorldResp.js", true);
+  xhttp.open("GET", "http://localhost/server ", true);
   xhttp.send();
+}
+
+function loadDoc2(id) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "http://localhost/server ", false);
+  xhttp.send();
+  id.innerHTML = xhttp.responseText;
 }

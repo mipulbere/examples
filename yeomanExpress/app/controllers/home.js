@@ -30,3 +30,8 @@ router.get('/route3', function (req, res, next) {
       articles: articles
     });
 });
+
+
+router.get('/user/:id', function (req, res, next) {
+  res.send('the ip address is - ' + req.ip);
+});
